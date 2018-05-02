@@ -132,7 +132,7 @@ module Akamai #:nodoc:
 
       # Returns a string with all data that will be signed
       def make_data_to_sign(request, auth_header)
-        url = URI(request.path)
+        url = URI(request.uri)
         data_to_sign = [
           request.method,
           url.scheme,
